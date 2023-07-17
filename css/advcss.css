@@ -1,0 +1,87 @@
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited{
+    color: black;
+}
+
+a:active{
+    color: blue;
+}
+
+a:hover {
+    color: yellow;
+} */
+/* body{
+    background-color:burlywood;
+}
+.container p:last-child {
+    color: red;
+} 
+
+.container p:nth-child(even) {
+    color: blue;
+}
+
+p::before{
+    display: block;
+    content: "hello";
+    background-color: #ff9933;
+    color: white;
+}
+
+p::after{
+    display: block;
+    content: "Worldd";
+    background-color: green;
+    color: white;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    margin: 100px auto;
+    background-color: aqua;
+    transition: all 0.5s;
+}
+
+.square:hover{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    transform: rotate(10deg);
+} */
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    animation: 5s box infinite;
+    animation-delay: 1ms;
+}
+
+@keyframes box {
+    10%{
+        margin-left: 1000px;
+        background-color: aqua;
+        transform: rotate(180deg);
+    }
+    80%{
+        margin-top: 500px;
+        background-color: blueviolet;
+        transform: rotate(360deg);
+    }
+    100%{
+        margin-bottom: 1000px;
+        background-color: chocolate;
+    }
+    
+}
