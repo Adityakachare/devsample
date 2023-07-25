@@ -65,3 +65,66 @@ b=a--;
 c=--a;
 
 console.log(a,b,c);
+
+// OBJECT
+const items = {
+    food: 1000,
+    drinks: 2000,
+    nm: "Aditya"
+};
+
+console.log(items.nm);
+
+cart = 0;
+function addToCart(x){
+    return cart+x;
+}
+
+function addItem(x){
+    cart = addToCart(x);
+}
+
+addItem(items.food);
+addToCart(items.food);
+addToCart(items.drinks);
+console.log("Cart: ", cart);
+var cart;
+
+
+var add = () => {
+    x = 5+6;
+    return x;
+    
+};
+
+console.log(add());
+
+
+
+//THIS
+const ourObject = {
+    name: "This keyword",
+    getThis: function(){
+        console.log(this)
+    }
+};
+
+ourObject.getThis();
+
+
+//RECURSION
+
+var num = 1;
+function printNum(){
+    console.log(num);
+    num++;
+
+    if(num<=10){
+        printNum();
+    }
+    else{
+        return;
+    }
+}
+
+printNum();
