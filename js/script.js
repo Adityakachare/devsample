@@ -128,3 +128,109 @@ function printNum(){
 }
 
 printNum();
+
+
+
+//Day 15: 
+
+//destructuring
+
+function getArray(){
+    return [1,2];
+}
+
+const [p,q,r] = getArray();
+
+console.log(p);
+console.log(q);
+console.log(r);
+
+function sumAndMultiply (a, b){
+    return [a+b, a*b]
+}
+
+const array = sumAndMultiply(10, 3);
+
+console.log(array)
+
+//MAP
+
+var myArray = [1,2,3];
+
+var newArray = myArray.map((e) => {
+    if(myArray[0] == 1){
+        return e+5;
+    }
+    else{
+        return e+2;
+    }
+});
+
+console.log(newArray);
+console.log(myArray);
+
+
+//FILTER
+
+var abc = [10,20,30,40,50]; 
+
+var filteredArray = abc.filter(e => e<50);
+
+console.log(filteredArray);
+console.log(abc);
+
+//ES 6
+
+function hello(name = "Aditya"){
+    
+    console.log("Hello " +name);
+    
+}
+hello("World");
+
+//ES6
+//Template Literals
+console.log("Apple\nBanana\nGrapes\nMango")
+console.log(`
+Apple
+Banana  Grapes
+Mango
+`)
+console.log(`
+
+`)
+//SCOPING
+
+function outer(){
+    let name1 = "Aditya"
+    
+
+    function inner(){
+        let name1 = "Aryan"
+        console.log(name1)
+    }
+    inner();
+    console.log(name1)
+}
+outer()
+
+
+
+//FETCHING DATA FROM JSON PLACEHOLDER
+//json => converts fetched data to object key value pair
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((result)=>result.json())
+.then((data)=>console.log(data))
+
+
+console.log(`
+
+`)
+
+const getData = async () => {
+    const resultf = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data1 = await resultf.json();
+    console.log(data1);
+};
+
+getData();
